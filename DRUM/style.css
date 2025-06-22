@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(to left,rgb(0, 0, 0),rgb(40, 9, 99));
+    color: rgb(198, 197, 211);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    text-align: center;
+  }
+  #heading{
+    font-size: 80px;
+    font-weight: 800;
+    padding-bottom: 70px;
+    color:rgba(100, 106, 169, 0.756)
+  }
+  .drum-kit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 600px;
+  }
+ 
+  
+  .key {
+    flex: 1 1 calc(14.28% - 20px); 
+    min-width: 80px;
+    max-width: 120px;
+    height: 80px;
+    border: 2px solid #fff;
+    padding: 20px;
+    font-size: 24px;
+    font-weight:1000;
+     text-shadow:
+    -2px -2px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    border-radius: 8px;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .key.playing {
+    transform: scale(1.1);
+    background: #ff4081;
+    color: #000;
+  }
+  
+  .key[data-key="65"] {
+    background-image:url('Images/hihat.webp');
+  background-size: cover;    
+  
+  }
+ 
+  .key[data-key="83"] {
+    background-image:url('Images/snare.jpg');
+  background-size: cover;    
+  }
+  
+  .key[data-key="70"] {
+    background-image:url('Images/tom.avif');
+  background-size: cover;    
+  }
+  .key[data-key="71"] {
+    background-image:url('Images/tom.avif');
+  background-size: cover;    
+  }
+  .key[data-key="72"] {
+    background-image:url('Images/crash.png');
+  background-size: cover;    
+  }
+  .key[data-key="68"] {
+    background-image:url('Images/kick.avif');
+  background-size: cover;    
+  }
+  .key[data-key="74"] {
+    background-image:url('Images/ride.jpg');
+  background-size: cover;    
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .key {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .key {
+      flex: 1 1 100%;
+    }
+  }
+  
